@@ -94,7 +94,7 @@ const AttackerTable = ({
                 type="number"
                 name="ap"
                 value={attackerData.ap}
-                onChange={(e) => onInputChange("ap", e.target.value)}
+                onChange={(e) => onInputChange("ap", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -105,7 +105,7 @@ const AttackerTable = ({
                 type="number"
                 name="aap"
                 value={attackerData.aap}
-                onChange={(e) => onInputChange("aap", e.target.value)} />
+                onChange={(e) => onInputChange("aap", Number(e.target.value))} />
             </TableCell>
           </TableRow>
           <TableRow>
@@ -115,7 +115,7 @@ const AttackerTable = ({
                 type="number"
                 name="totalAp"
                 value={attackerData.totalAp}
-                onChange={(e) => onInputChange("totalAp", e.target.value)} />
+                onChange={(e) => onInputChange("totalAp", Number(e.target.value))} />
             </TableCell>
           </TableRow>
           <TableRow>
@@ -125,7 +125,7 @@ const AttackerTable = ({
                 type="number"
                 name="totalAap"
                 value={attackerData.totalAap}
-                onChange={(e) => onInputChange("totalAap", e.target.value)}
+                onChange={(e) => onInputChange("totalAap", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -136,7 +136,7 @@ const AttackerTable = ({
                 type="number"
                 name="humanDamage"
                 value={attackerData.humanDamage}
-                onChange={(e) => onInputChange("humanDamage", e.target.value)}
+                onChange={(e) => onInputChange("humanDamage", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -165,7 +165,7 @@ const AttackerTable = ({
                 type="number"
                 name="critDamage"
                 value={attackerData.critDamage}
-                onChange={(e) => onInputChange("critDamage", e.target.value)}
+                onChange={(e) => onInputChange("critDamage", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -177,7 +177,7 @@ const AttackerTable = ({
                 type="number"
                 name="downAttack"
                 value={attackerData.downAttack}
-                onChange={(e) => onInputChange("downAttack", e.target.value)}
+                onChange={(e) => onInputChange("downAttack", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -189,7 +189,7 @@ const AttackerTable = ({
                 type="number"
                 name="backAttack"
                 value={attackerData.backAttack}
-                onChange={(e) => onInputChange("backAttack", e.target.value)}
+                onChange={(e) => onInputChange("backAttack", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -201,7 +201,7 @@ const AttackerTable = ({
                 type="number"
                 name="airAttack"
                 value={attackerData.airAttack}
-                onChange={(e) => onInputChange("airAttack", e.target.value)}
+                onChange={(e) => onInputChange("airAttack", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -213,7 +213,7 @@ const AttackerTable = ({
                 type="number"
                 name="allSpecialAttack"
                 value={attackerData.allSpecialAttack}
-                onChange={(e) => onInputChange("allSpecialAttack", e.target.value)}
+                onChange={(e) => onInputChange("allSpecialAttack", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -225,7 +225,7 @@ const AttackerTable = ({
                 type="number"
                 name="accuracy"
                 value={attackerData.accuracy}
-                onChange={(e) => onInputChange("accuracy", e.target.value)}
+                onChange={(e) => onInputChange("accuracy", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -236,7 +236,7 @@ const AttackerTable = ({
                 type="number"
                 name="accuracyRate"
                 value={attackerData.accuracyRate}
-                onChange={(e) => onInputChange("accuracyRate", e.target.value)}
+                onChange={(e) => onInputChange("accuracyRate", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -248,7 +248,7 @@ const AttackerTable = ({
                 type="number"
                 name="critRate"
                 value={attackerData.critRate}
-                onChange={(e) => onInputChange("critRate", e.target.value)}
+                onChange={(e) => onInputChange("critRate", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -260,7 +260,7 @@ const AttackerTable = ({
                 type="number"
                 name="skillDamage"
                 value={attackerData.skillDamage}
-                onChange={(e) => onInputChange("skillDamage", e.target.value)}
+                onChange={(e) => onInputChange("skillDamage", Number(e.target.value))}
               />
               <span>%</span>
               <span className="font-bold">×</span>
@@ -268,7 +268,7 @@ const AttackerTable = ({
                 type="number"
                 name="skillDamageHitTimes"
                 value={attackerData.skillDamageHitTimes}
-                onChange={(e) => onInputChange("skillDamageHitTimes", e.target.value)}
+                onChange={(e) => onInputChange("skillDamageHitTimes", Number(e.target.value))}
               />
               <span>打撃</span>
             </TableCell>
@@ -280,7 +280,7 @@ const AttackerTable = ({
                 type="number"
                 name="skillPvpDamageReduction"
                 value={attackerData.skillPvpDamageReduction}
-                onChange={(e) => onInputChange("skillPvpDamageReduction", e.target.value)}
+                onChange={(e) => onInputChange("skillPvpDamageReduction", Number(e.target.value))}
               />
               %</TableCell>
           </TableRow>

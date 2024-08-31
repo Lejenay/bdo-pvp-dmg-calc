@@ -68,7 +68,7 @@ const DefenderTable = ({
                 type="number"
                 name="hp"
                 value={defenderData.hp}
-                onChange={(e) => onInputChange("hp", e.target.value)}
+                onChange={(e) => onInputChange("hp", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -79,7 +79,7 @@ const DefenderTable = ({
                 type="number"
                 name="drRate"
                 value={defenderData.drRate}
-                onChange={(e) => onInputChange("drRate", e.target.value)} />
+                onChange={(e) => onInputChange("drRate", Number(e.target.value))} />
               %
             </TableCell>
           </TableRow>
@@ -90,7 +90,7 @@ const DefenderTable = ({
                 type="number"
                 name="meleeDr"
                 value={defenderData.meleeDr}
-                onChange={(e) => onInputChange("meleeDr", e.target.value)}
+                onChange={(e) => onInputChange("meleeDr", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -101,7 +101,7 @@ const DefenderTable = ({
                 type="number"
                 name="meleeEvasion"
                 value={defenderData.meleeEvasion}
-                onChange={(e) => onInputChange("meleeEvasion", e.target.value)}
+                onChange={(e) => onInputChange("meleeEvasion", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -112,7 +112,7 @@ const DefenderTable = ({
                 type="number"
                 name="meleeEvasionRate"
                 value={defenderData.meleeEvasionRate}
-                onChange={(e) => onInputChange("meleeEvasionRate", e.target.value)}
+                onChange={(e) => onInputChange("meleeEvasionRate", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -124,7 +124,7 @@ const DefenderTable = ({
                 type="number"
                 name="rangedDr"
                 value={defenderData.rangedDr}
-                onChange={(e) => onInputChange("rangedDr", e.target.value)}
+                onChange={(e) => onInputChange("rangedDr", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -135,7 +135,7 @@ const DefenderTable = ({
                 type="number"
                 name="rangedEvasion"
                 value={defenderData.rangedEvasion}
-                onChange={(e) => onInputChange("rangedEvasion", e.target.value)}
+                onChange={(e) => onInputChange("rangedEvasion", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -146,7 +146,7 @@ const DefenderTable = ({
                 type="number"
                 name="rangedEvasionRate"
                 value={defenderData.rangedEvasionRate}
-                onChange={(e) => onInputChange("rangedEvasionRate", e.target.value)}
+                onChange={(e) => onInputChange("rangedEvasionRate", Number(e.target.value))}
               />
               %
             </TableCell>
@@ -158,7 +158,7 @@ const DefenderTable = ({
                 type="number"
                 name="magicDr"
                 value={defenderData.magicDr}
-                onChange={(e) => onInputChange("magicDr", e.target.value)}
+                onChange={(e) => onInputChange("magicDr", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -169,7 +169,7 @@ const DefenderTable = ({
                 type="number"
                 name="magicEvasion"
                 value={defenderData.magicEvasion}
-                onChange={(e) => onInputChange("magicEvasion", e.target.value)}
+                onChange={(e) => onInputChange("magicEvasion", Number(e.target.value))}
               />
             </TableCell>
           </TableRow>
@@ -180,7 +180,7 @@ const DefenderTable = ({
                 type="number"
                 name="magicEvasionRate"
                 value={defenderData.magicEvasionRate}
-                onChange={(e) => onInputChange("magicEvasionRate", e.target.value)}
+                onChange={(e) => onInputChange("magicEvasionRate", Number(e.target.value))}
               />
               %
             </TableCell>
