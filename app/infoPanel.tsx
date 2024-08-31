@@ -2,7 +2,7 @@
 
 import AttackerTable from "./attacker-table";
 import DefenderTable from "./defender-table";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { initialAttackerData } from "@/static/init-attacker-data";
 import { Button } from "@/components/ui/button";
 import { useGetDamage } from "@/hooks/use-get-damage";
@@ -43,6 +43,16 @@ const InfoPanel = () => {
     }
     mutate({ ...attackerData, ...defenderData });
   };
+
+  useEffect(() => {
+    if (error) {
+      toast({
+        variant: "destructive",
+        title: "エラー",
+        description: error instanceof Error ? error.message : "計算中にエラーが発生しました。",
+      });
+    }
+  }, [damageData, error]);
 
   return (
     <div className="flex gap-20 justify-center">
