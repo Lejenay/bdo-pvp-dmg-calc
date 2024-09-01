@@ -4,7 +4,7 @@
 [bdo-pvp-dmg-calc.vercel.app](bdo-pvp-dmg-calc.vercel.app) is the production page rn
 
 
-## Getting Started
+## Try out in your local
 
 First, run the development server:
 
