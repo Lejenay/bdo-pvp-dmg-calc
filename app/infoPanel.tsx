@@ -16,14 +16,35 @@ const InfoPanel = () => {
   const [currentDamageData, setCurrentDamageData] = useState<DamageCalculationResultType>();
   const [previousDamageData, setPreviousDamageData] = useState<DamageCalculationResultType>();
 
+  // load data from local storage
+  useEffect(() => {
+    const savedAttackerData = localStorage.getItem('attackerData');
+    const savedDefenderData = localStorage.getItem('defenderData');
+
+    if (savedAttackerData) {
+      setAttackerData(JSON.parse(savedAttackerData));
+    }
+    if (savedDefenderData) {
+      setDefenderData(JSON.parse(savedDefenderData));
+    }
+  }, []);
+
   const handleAttackerInputChange =
     (key: string, value: string | number) => {
-      setAttackerData(prev => ({ ...prev, [key]: value }));
+      setAttackerData(prev => {
+        const newData = { ...prev, [key]: value };
+        localStorage.setItem('attackerData', JSON.stringify(newData));
+        return newData;
+      })
     };
 
   const handleDefenderInputChange =
     (key: string, value: string | number) => {
-      setDefenderData(prev => ({ ...prev, [key]: value }));
+      setDefenderData(prev => {
+        const newData = { ...prev, [key]: value };
+        localStorage.setItem('defenderData', JSON.stringify(newData));
+        return newData;
+      });
     };
 
   const { mutate, data: damageData, isPending, error } = useGetDamage();
@@ -69,10 +90,10 @@ const InfoPanel = () => {
         description: error instanceof Error ? error.message : "計算中にエラーが発生しました。",
       });
     }
-  }, [damageData, error]);
+  }, [error]);
 
   return (
-    <div className="flex gap-20 justify-center">
+    <div className="flex flex-col md:flex-row gap-20 justify-center md:px-3 px-5">
       <AttackerTable
         attackerData={attackerData}
         onInputChange={handleAttackerInputChange}
@@ -89,7 +110,7 @@ const InfoPanel = () => {
           {isPending ? "計算中..." : "計算"}
         </Button>
       </div>
-      <ResultTable curData={currentDamageData} prvData={previousDamageData}/>
+      <ResultTable curData={currentDamageData} prvData={previousDamageData} />
     </div>
   );
 }

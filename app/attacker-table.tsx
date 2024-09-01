@@ -250,22 +250,26 @@ const AttackerTable = ({
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">スキルダメージ</TableCell>
-            <TableCell className="flex items-center justify-center gap-2">
-              <Input
-                type="number"
-                name="skillDamage"
-                value={attackerData.skillDamage}
-                onChange={(e) => onInputChange("skillDamage", Number(e.target.value))}
-              />
-              <span>%</span>
-              <span className="font-bold">×</span>
-              <Input
-                type="number"
-                name="skillDamageHitTimes"
-                value={attackerData.skillDamageHitTimes}
-                onChange={(e) => onInputChange("skillDamageHitTimes", Number(e.target.value))}
-              />
-              <span>打撃</span>
+            <TableCell className="flex flex-col md:flex-row items-center justify-center gap-2">
+              <div className="flex gap-2 items-center justify-center">
+                <Input
+                  type="number"
+                  name="skillDamage"
+                  value={attackerData.skillDamage}
+                  onChange={(e) => onInputChange("skillDamage", Number(e.target.value))}
+                />
+                <span>%</span>
+              </div>
+              <div className="flex gap-2 items-center justify-center">
+                <span className="font-bold">×</span>
+                <Input
+                  type="number"
+                  name="skillDamageHitTimes"
+                  value={attackerData.skillDamageHitTimes}
+                  onChange={(e) => onInputChange("skillDamageHitTimes", Number(e.target.value))}
+                />
+                <span>打撃</span>
+              </div>
             </TableCell>
           </TableRow>
           <TableRow>
