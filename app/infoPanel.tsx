@@ -5,7 +5,7 @@ import DefenderTable from "./defender-table";
 import { useEffect, useState } from "react";
 import { initialAttackerData } from "@/static/init-attacker-data";
 import { Button } from "@/components/ui/button";
-import { useGetDamage } from "@/hooks/use-get-damage";
+import { DamageCalculationResultType, useGetDamage } from "@/hooks/use-get-damage";
 import { initialDefenderData } from "@/static/init-defender-data";
 import { toast } from "@/hooks/use-toast";
 import ResultTable from "./result-table";
@@ -13,6 +13,8 @@ import ResultTable from "./result-table";
 const InfoPanel = () => {
   const [attackerData, setAttackerData] = useState(initialAttackerData);
   const [defenderData, setDefenderData] = useState(initialDefenderData);
+  const [currentDamageData, setCurrentDamageData] = useState<DamageCalculationResultType>();
+  const [previousDamageData, setPreviousDamageData] = useState<DamageCalculationResultType>();
 
   const handleAttackerInputChange =
     (key: string, value: string | number) => {
@@ -53,6 +55,13 @@ const InfoPanel = () => {
   };
 
   useEffect(() => {
+    if (damageData) {
+      setPreviousDamageData(currentDamageData);
+      setCurrentDamageData(damageData);
+    }
+  }, [damageData]);
+
+  useEffect(() => {
     if (error) {
       toast({
         variant: "destructive",
@@ -80,7 +89,7 @@ const InfoPanel = () => {
           {isPending ? "計算中..." : "計算"}
         </Button>
       </div>
-      <ResultTable data={damageData} />
+      <ResultTable curData={currentDamageData} prvData={previousDamageData}/>
     </div>
   );
 }
