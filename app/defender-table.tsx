@@ -40,6 +40,7 @@ const DefenderTable = ({
                   <SelectItem value="maehwa">ツバキ</SelectItem>
                   <SelectItem value="valkyrie">ヴァルキリー</SelectItem>
                   <SelectItem value="lahn">ラン</SelectItem>
+                  <SelectItem value="sorceress">ソーサレス</SelectItem>
                   <SelectItem value="kunoichi">くのいち</SelectItem>
                   <SelectItem value="ninja">忍者</SelectItem>
                   <SelectItem value="wizard">ウィザード</SelectItem>
