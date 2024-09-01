@@ -877,7 +877,6 @@ export const getClassPvpDamageModifier = (
 ): number => {
   if (pvpDamageModifiers[atClass] && pvpDamageModifiers[atClass][dfClass]) {
     const result = pvpDamageModifiers[atClass][dfClass];
-    console.log(result);
     return result;
   }
   // if class is not found

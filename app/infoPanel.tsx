@@ -40,6 +40,14 @@ const InfoPanel = () => {
         title: "エラー",
         description: "スキルの参照先を選択してください。"
       })
+      return;
+    } else if (attackerData.attackType === "") {
+      toast({
+        variant: "destructive",
+        title: "エラー",
+        description: "アタックの種類を選択してください。"
+      })
+      return;
     }
     mutate({ ...attackerData, ...defenderData });
   };

@@ -6,7 +6,15 @@ export type DamageCalculationResultType = {
   damage: number;
   hpLoss: number;
   hitRate: number;
+  evasionRate: number;
   hpLossRate: number;
+  evasionCount: number;
+  criticalCount: number;
+  skillDamageHitTimes: number;
+  maxDamage: number;
+  minDamage: number;
+  maxHpLoss: number;
+  minHpLoss: number;
 };
 
 export const useGetDamage = () => {

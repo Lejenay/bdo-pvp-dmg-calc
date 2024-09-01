@@ -15,14 +15,6 @@ const AttackerTable = ({
   return (
     <div>
       <Table>
-        <TableCaption>
-          <a href="https://www.reddit.com/r/blackdesertonline/comments/1ews78o/pvp_damage_formula_reversed_pvp_damage_calculator/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline">
-            Original equation (external link)
-          </a>
-        </TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead></TableHead>
@@ -66,6 +58,7 @@ const AttackerTable = ({
                   <SelectItem value="woosa">ウサ</SelectItem>
                   <SelectItem value="maegu">メグ</SelectItem>
                   <SelectItem value="scholar">スカラー</SelectItem>
+                  <SelectItem value="dosa">ドーサ</SelectItem>
                 </SelectContent>
               </Select>
             </TableCell>

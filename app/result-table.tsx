@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableCaption, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
+import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
 import { DamageCalculationResultType } from "@/hooks/use-get-damage";
 
 type Props = {
@@ -20,7 +20,7 @@ const ResultTable = ({ data }: Props) => {
   };
 
   return (
-    <div className="w-[200px]">
+    <div>
       <Table>
         <TableHeader>
           <TableRow>
@@ -42,8 +42,36 @@ const ResultTable = ({ data }: Props) => {
             <TableCell>{formatPercentage(data?.hpLossRate)}</TableCell>
           </TableRow>
           <TableRow>
+            <TableCell className="font-medium">理論最小ダメージ量</TableCell>
+            <TableCell>{formatNumber(data?.minDamage)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">理論最大ダメージ量</TableCell>
+            <TableCell>{formatNumber(data?.maxDamage)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">理論最小HP減少量</TableCell>
+            <TableCell>{formatNumber(data?.minHpLoss)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">理論最大HP減少量</TableCell>
+            <TableCell>{formatNumber(data?.maxHpLoss)}</TableCell>
+          </TableRow>
+          <TableRow>
             <TableCell className="font-medium">命中率</TableCell>
             <TableCell>{formatPercentage(data?.hitRate)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">回避率</TableCell>
+            <TableCell>{formatPercentage(data?.evasionRate)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">回避回数</TableCell>
+            <TableCell>{formatNumber(data?.evasionCount)} 回 / {formatNumber(data?.skillDamageHitTimes)} 打撃中</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell className="font-medium">クリ回数</TableCell>
+            <TableCell>{formatNumber(data?.criticalCount)} 回 / {formatNumber(data?.skillDamageHitTimes)} 打撃中</TableCell>
           </TableRow>
         </TableBody>
       </Table>

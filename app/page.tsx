@@ -9,7 +9,7 @@ export default function Home() {
   const [queryClient] = useState(() => new QueryClient())
 
   return (
-    <main className="min-h-screen flex justify-center">
+    <main className=" flex justify-center mb-10">
       <div className="w-full mt-5 flex justify-center">
         <QueryClientProvider client={queryClient}>
           <InfoPanel />

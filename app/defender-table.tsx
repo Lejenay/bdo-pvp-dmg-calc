@@ -56,7 +56,7 @@ const DefenderTable = ({
                   <SelectItem value="drakania">ドラカニア</SelectItem>
                   <SelectItem value="woosa">ウサ</SelectItem>
                   <SelectItem value="maegu">メグ</SelectItem>
-                  <SelectItem value="scholar">スカラー</SelectItem>
+                  <SelectItem value="dosa">ドーサ</SelectItem>
                 </SelectContent>
               </Select>
             </TableCell>
