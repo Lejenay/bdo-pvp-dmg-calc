@@ -24,7 +24,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline text-slate-500 text-sm dark:text-slate-300">
-                - Original equation (external link)
+                - Original formula on Reddit (外部リンク)
               </a>
             </div>
             <div>
@@ -32,7 +32,15 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline text-slate-500 text-sm dark:text-slate-300">
-                - Garmoth.com Gear Planner (external link)
+                - Garmoth.com Gear Planner (外部リンク)
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/Lejenay/bdo-pvp-dmg-calc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-slate-500 text-sm dark:text-slate-300">
+                - View on Github (外部リンク)
               </a>
             </div>
           </div>
