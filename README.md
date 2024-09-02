@@ -6,7 +6,7 @@
 
 ## Try out in your local
 
-First, run the development server:
+Run the development server with:
 
 ```bash
 npm run dev
