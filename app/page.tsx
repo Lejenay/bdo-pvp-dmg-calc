@@ -1,7 +1,6 @@
 "use client"
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import InputTable from "./infoPanel";
 import { useState } from "react";
 import InfoPanel from "./infoPanel";
 

@@ -16,14 +16,14 @@ import { Button } from "@/components/ui/button";
 const Footer = () => {
   return (
     <div className="w-full flex justify-center">
-      <footer className="w-[720px] h-[70px] border-t-2 bg-white mt-auto">
+      <footer className="w-[720px] h-[70px] border-t-2 mt-auto">
         <div className="flex items-center justify-between">
           <div className="px-5 py-4 flex flex-col gap-2 w-full">
             <div>
               <a href="https://www.reddit.com/r/blackdesertonline/comments/1ews78o/pvp_damage_formula_reversed_pvp_damage_calculator/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-slate-500 text-sm">
+                className="hover:underline text-slate-500 text-sm dark:text-slate-300">
                 - Original equation (external link)
               </a>
             </div>
@@ -31,7 +31,7 @@ const Footer = () => {
               <a href="https://garmoth.com/characters"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-slate-500 text-sm">
+                className="hover:underline text-slate-500 text-sm dark:text-slate-300">
                 - Garmoth.com Gear Planner (external link)
               </a>
             </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-full flex items-center justify-center">
-          <h3 className="text-slate-600 text-sm">
+          <h3 className="text-slate-600 dark:text-slate-300 text-sm">
             Copyright © 2024 Lejenay All rights reserved.
           </h3>
         </div>
