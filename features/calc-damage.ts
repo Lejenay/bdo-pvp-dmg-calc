@@ -45,26 +45,26 @@ export const calcDamage = ({
     forceEvaded: boolean = false
   ) => {
     // Step 0: define class type
-    const dfClassType = getClassType(dfClass);
+    const atClassType = getClassType(atClass);
 
     const typedDr =
-      dfClassType === "melee"
+      atClassType === "melee"
         ? meleeDr
-        : dfClassType === "magic"
+        : atClassType === "magic"
         ? magicDr
         : rangedDr;
 
     const typedEvasion =
-      dfClassType === "melee"
+      atClassType === "melee"
         ? meleeEvasion
-        : dfClassType === "magic"
+        : atClassType === "magic"
         ? magicEvasion
         : rangedEvasion;
 
     const typedEvasionRate =
-      dfClassType === "melee"
+      atClassType === "melee"
         ? meleeEvasionRate
-        : dfClassType === "magic"
+        : atClassType === "magic"
         ? magicEvasionRate
         : rangedEvasionRate;
 
