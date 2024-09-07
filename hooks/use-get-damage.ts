@@ -3,7 +3,6 @@ import { client } from "@/lib/hono";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export type DamageCalculationResultType = {
-  damage: number;
   hpLoss: number;
   hitRate: number;
   evasionRate: number;
@@ -11,8 +10,6 @@ export type DamageCalculationResultType = {
   evasionCount: number;
   criticalCount: number;
   skillDamageHitTimes: number;
-  maxDamage: number;
-  minDamage: number;
   maxHpLoss: number;
   minHpLoss: number;
 };

@@ -32,12 +32,7 @@ const ResultTable = ({ curData, prvData }: Props) => {
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell className="font-medium">ダメージ量</TableCell>
-            <TableCell>{formatNumber(curData?.damage)}</TableCell>
-            <TableCell>{formatNumber(prvData?.damage)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="font-medium">HP減少量</TableCell>
+            <TableCell className="font-medium">HP減少量 (ダメージ)</TableCell>
             <TableCell>{formatNumber(curData?.hpLoss)}</TableCell>
             <TableCell>{formatNumber(prvData?.hpLoss)}</TableCell>
           </TableRow>
@@ -45,16 +40,6 @@ const ResultTable = ({ curData, prvData }: Props) => {
             <TableCell className="font-medium">HP減少率</TableCell>
             <TableCell>{formatPercentage(curData?.hpLossRate)}</TableCell>
             <TableCell>{formatPercentage(prvData?.hpLossRate)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="font-medium">理論最小ダメージ量</TableCell>
-            <TableCell>{formatNumber(curData?.minDamage)}</TableCell>
-            <TableCell>{formatNumber(prvData?.minDamage)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="font-medium">理論最大ダメージ量</TableCell>
-            <TableCell>{formatNumber(curData?.maxDamage)}</TableCell>
-            <TableCell>{formatNumber(prvData?.maxDamage)}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="font-medium">理論最小HP減少量</TableCell>
@@ -82,7 +67,7 @@ const ResultTable = ({ curData, prvData }: Props) => {
             <TableCell>{formatNumber(prvData?.evasionCount)} 回 / {formatNumber(prvData?.skillDamageHitTimes)} 打撃中</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell className="font-medium">クリ回数</TableCell>
+            <TableCell className="font-medium">クリヒット回数</TableCell>
             <TableCell>{formatNumber(curData?.criticalCount)} 回 / {formatNumber(curData?.skillDamageHitTimes)} 打撃中</TableCell>
             <TableCell>{formatNumber(prvData?.criticalCount)} 回 / {formatNumber(prvData?.skillDamageHitTimes)} 打撃中</TableCell>
           </TableRow>

@@ -178,7 +178,6 @@ export const calcDamage = ({
   const hpLossRate = Math.min(hpLoss, hp) / hp;
 
   return {
-    damage: Math.round(totalDamage * 100) / 100,
     hpLoss: Math.round(hpLoss * 100) / 100,
     hpLossRate: Math.round(hpLossRate * 100) / 100,
     hitRate: Math.round(hitRate * 100) / 100,
@@ -186,10 +185,6 @@ export const calcDamage = ({
     evasionCount,
     criticalCount,
     skillDamageHitTimes,
-    maxDamage:
-      Math.round(theoreticalMaxDamage * skillDamageHitTimes * 100) / 100,
-    minDamage:
-      Math.round(theoreticalMinDamage * skillDamageHitTimes * 100) / 100,
     maxHpLoss: Math.round(maxHpLoss * 100) / 100,
     minHpLoss: Math.round(minHpLoss * 100) / 100,
   };
