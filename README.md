@@ -4,7 +4,7 @@ A web-based damage calculator for PvP scenarios in **Black Desert Online**. It h
 
 🔗 **Live App:** [bdo-pvp-dmg-calc.vercel.app](https://bdo-pvp-dmg-calc.vercel.app)
 
----
+
 
 ## 🚀 Features
 
@@ -14,12 +14,12 @@ A web-based damage calculator for PvP scenarios in **Black Desert Online**. It h
   - Class-specific Damage Modifiers (Class vs Class)
   - Special Attack modifiers (Down Attack, Back Attack, Crit, etc.)
 
----
+
 
 ## 📸 Screenshots
 ![image](https://github.com/user-attachments/assets/07845468-5912-431a-b301-113712de61eb)
 
----
+
 
 ## ⚙️ How It Works
 
@@ -30,7 +30,7 @@ It calculates the final PvP damage value based on:
 2. **Defender Stats**: HP, DR, Evasion etc.
 3. **PvP Damage Formula** from [source](https://www.reddit.com/r/blackdesertonline/comments/1ews78o/pvp_damage_formula_reversed_pvp_damage_calculator/)
 
----
+
 
 ## 🛠 Tech Stack
 
@@ -39,7 +39,7 @@ It calculates the final PvP damage value based on:
 - [Tailwind CSS](https://tailwindcss.com/)
 - Deployed via [Vercel](https://vercel.com)
 
----
+
 
 ## 📦 Running Locally
 
